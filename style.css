@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    display: grid;
+    place-content: center;
+    height: 100vh;
+    background: #333;
+    transition: 0.5s;
+  }
+  body.active {
+    background: #aaa;
+  }
+  div {
+    position: relative;
+    width: 20em;
+    height: 10em;
+    border-radius: 5em;
+    background: #111;
+    transition: 0.5s;
+    cursor: pointer;
+    box-shadow: inset 0 0 20px rgba(112, 104, 104, 0.479), inset 0 0 0 50px #333;
+  }
+  div.active {
+    background: #aaa;
+    box-shadow: inset 0 0 20px #555, inset 0 0 0 50px #888;
+  }
+  i {
+    position: absolute;
+    background: linear-gradient(to bottom, #444, #222);
+    width: 10em;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    transform: scale(0.8);
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5),
+      inset 0 4px 4px rgba(255, 255, 255, 0.2),
+      inset 0 -4px 4px rgb(255, 255, 255, 0.2);
+    transition: 0.5s;
+  }
+  div.active i {
+    left: 160px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1),
+      inset 0 4px 4px rgba(255, 255, 255, 1),
+      inset 0 -4px 4px rgb(255, 255, 255, 1);
+    background: linear-gradient(to bottom, #aaa, #bbb);
+  }
+  
